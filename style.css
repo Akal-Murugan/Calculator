@@ -30,10 +30,12 @@ html {
     justify-content: space-around;
     align-items: flex-end;
     padding: 6px;
-    font-size: 7em;
+    font-size: 6em;
     font-weight: initial;
     text-shadow: 1.5px 1.5px #3d3b3b;
     margin: 5px;
+    overflow: hidden; 
+    white-space: nowrap;
 }
 button {
     margin: 1px;
@@ -83,9 +85,16 @@ button {
 
 .clear {
     background-color: rgb(232, 230, 158);
-    grid-column: span 3;
+    grid-column: span 2;
 }
 .clear:active {
+    background-color: rgb(241, 237, 6);
+}
+.bspace {
+    background-color: rgb(232, 230, 158);
+
+}
+.bspace:active {
     background-color: rgb(241, 237, 6);
 }
 
