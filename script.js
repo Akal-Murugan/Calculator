@@ -4,6 +4,7 @@ let firstOperand = null;
 let secondOperand = null;
 let firstOperator = null;
 let result = null;
+let len=0;
 const buttons = document.querySelectorAll('button');
 
 window.addEventListener('keydown', function(e){
@@ -85,7 +86,7 @@ function inputOperator(operator) {
         operator.toString();
         displayValue1= displayValue.concat(operator);
         displayValue=displayValue1;
-        let len = displayValue.length;
+         len = displayValue.length;
     } 
         
     
@@ -135,10 +136,10 @@ function inputBackspace() {
        if(displayValue.length>1) {
         displayValue1= displayValue.slice(0,((displayValue.length)-1));
         displayValue=displayValue1;
-        if(displayValue.length()<len)
+        if(displayValue.length<len)
         {
             firstOperator=null;
-            updateDisplay();
+            len = displayValue.length;
         }
        } 
        else{
