@@ -4,24 +4,26 @@ html {
 }
 #calc {
     display: flex;
-    min-block-size: 95vh;
     justify-content: center;
-    align-content: center;
     align-items: center;
-    block-size: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
     background-color: honeydew;
 }
 
 #container {
+    max-width: 500px; 
+    width: 90%; 
+    margin: 0 auto;
     background-color: rgb(46, 44, 44);
     border: 15px solid black;
     border-radius: 20px;
     display: grid;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: minmax(100px, auto) repeat(5, 100px);
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: minmax(100px, auto) repeat(5, 1fr); 
     gap: 3px;
+    padding: 10px;
 }
+
 #display {
     grid-column: 1 / -1;
     background-color: #8d8b8b;
