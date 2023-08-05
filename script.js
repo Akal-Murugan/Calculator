@@ -85,6 +85,7 @@ function inputOperator(operator) {
         operator.toString();
         displayValue1= displayValue.concat(operator);
         displayValue=displayValue1;
+        let len = displayValue.length;
     } 
         
     
@@ -134,7 +135,13 @@ function inputBackspace() {
        if(displayValue.length>1) {
         displayValue1= displayValue.slice(0,((displayValue.length)-1));
         displayValue=displayValue1;
-       } else{
+        if(displayValue.length()<len)
+        {
+            firstOperator=null;
+            updateDisplay();
+        }
+       } 
+       else{
         displayValue='0';
        }
     }
