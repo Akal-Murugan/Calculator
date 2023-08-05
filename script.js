@@ -128,7 +128,7 @@ function clearDisplay() {
 }
 
 function inputBackspace() {
-    if (displayValue===null||displayValue==='Error')
+    if (displayValue==='NaN'||displayValue==='Error')
     {
         displayValue='0';
     }
